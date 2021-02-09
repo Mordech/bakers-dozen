@@ -1,5 +1,6 @@
 import { sizes } from "../assets/inputs/BakeThings"
 
+//the Value in ingredients is in percents
 //Recepie creator
 function createRecepie(hydration, size, ingredients, small, medium, large) {
 
