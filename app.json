@@ -1,6 +1,7 @@
 {
   "expo": {
-    "name": "bakers-dozen",
+    "userInterfaceStyle": "automatic",
+    "name": "Bakers Dozen",
     "slug": "bakers-dozen",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#F9F9F9"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -17,16 +18,23 @@
       "**/*"
     ],
     "ios": {
+      "userInterfaceStyle": "automatic",
       "supportsTablet": true
     },
     "android": {
+      "userInterfaceStyle": "automatic",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "backgroundColor": "#F9F9F9"
+      },
+      "package": "com.mordech.bakersdozen",
+      "permissions": ["WRITE_EXTERNAL_STORAGE"]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "androidNavigationBar": {
+      "backgroundColor": "#0A0B0D"
     }
   }
 }
