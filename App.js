@@ -14,9 +14,11 @@ if (Platform.OS === 'android') {
   }
 }
 
-export default function App(props) {
-  const onChange = ({ window }) => {
+export default function App() {
+
+  const onChange = () => {
     store.dispatch(getWindowSize(Dimensions.get('window')));
+    // console.log(store.getState().windowSize)
   };
 
   useEffect(() => {

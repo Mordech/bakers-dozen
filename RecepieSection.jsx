@@ -8,6 +8,7 @@ import RecepieTitle from "./components/recepie-title/RecepieTitle";
 import shareView from "./utils/shareView";
 import themeColor from "./app-styles/ThemeColors";
 import colors from "./app-styles/colors";
+import shareRecepie from "./recepies/shareRecepie";
 
 function RecepieSection() {
 	const recepieViewRef = useRef();
@@ -32,7 +33,7 @@ function RecepieSection() {
 			<ButtonAlt
 				lable="Share recipie"
 				press={() => {
-					shareView(recepieViewRef.current);
+					shareRecepie();
 				}}
 			/>
 		</View>
