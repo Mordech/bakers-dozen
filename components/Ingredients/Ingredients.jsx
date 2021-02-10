@@ -2,6 +2,7 @@ import React from "react";
 import { Text, View } from "react-native";
 import { connect } from "react-redux";
 import appStyles from "../../app-styles/appStyles";
+import isLiquid from "../../recepies/isLiquid";
 import { getIngredients } from "../../recepies/makeRecepie";
 import { mapDispatchToProps, mapStateToProps } from "../../redux/maps";
 
@@ -16,10 +17,7 @@ function Ingredients(props) {
 				<Text style={appStyles().body} key={index}>
 					<Text style={{ fontFamily: "DMSans-Bold" }}>{item.ingredient}:</Text>{" "}
 					{Math.floor(item.value)}
-					{item.ingredient.includes("Water") ||
-					item.ingredient.includes("Olive")
-						? "ml"
-						: "g"}
+					{isLiquid(item)}
 				</Text>
 			))}
 		</View>

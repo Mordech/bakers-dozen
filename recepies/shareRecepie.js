@@ -1,5 +1,6 @@
 import { Share } from "react-native";
 import store from "../redux/store";
+import isLiquid from "./isLiquid";
 import { getIngredients, getInstructions } from "./makeRecepie";
 
 export default function shareRecepie() {
@@ -11,7 +12,7 @@ export default function shareRecepie() {
 
     const ingredients =
         getIngredients(bake, hydration, size).map((item) =>
-            `${item.ingredient}: ${Math.floor(item.value)} ${isLiquid(item)}
+            `${item.ingredient}: ${Math.floor(item.value)}${isLiquid(item)}
 `).join("");
 
     const instructions =
@@ -33,11 +34,4 @@ ${footer}`;
 
     Share.share({ message })
 
-    //Check if the ingredient is water/olive oil or not
-    function isLiquid(item) {
-        return item.ingredient.includes("Water") ||
-            item.ingredient.includes("Olive")
-            ? "ml"
-            : "g";
-    }
 }
