@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View } from "react-native";
 import { connect } from "react-redux";
 import appStyles from "../../app-styles/appStyles";
-import isLiquid from "../../recepies/isLiquid";
+import { isLiquid } from "../../recepies/recepieFormating";
 import { getIngredients } from "../../recepies/makeRecepie";
 import { mapDispatchToProps, mapStateToProps } from "../../redux/maps";
 

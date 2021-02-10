@@ -1,6 +1,6 @@
 import { Share } from "react-native";
 import store from "../redux/store";
-import isLiquid from "./isLiquid";
+import { bakeEmoji, isLiquid } from "./recepieFormating";
 import { getIngredients, getInstructions } from "./makeRecepie";
 
 export default function shareRecepie() {
@@ -8,7 +8,7 @@ export default function shareRecepie() {
     const hydration = store.getState().hydration;
     const size = store.getState().size;
 
-    const title = "Recepie for " + size + " " + bake + " " + hydration.value + "% Hydration:";
+    const title = `Recepie for ${size} ${bake} ${hydration.value}% Hydration ${bakeEmoji(bake)}`;
 
     const ingredients =
         getIngredients(bake, hydration, size).map((item) =>
@@ -20,11 +20,11 @@ export default function shareRecepie() {
             `${index + 1}. ${item}
 `).join("");
 
-    const footer = "Created by you with the help of the Baker's Dozen app ";
+    const footer = "Created by you with the help of the Baker's Dozen app";
 
     const message =
         `${title}
-        
+
 Ingredients:
 ${ingredients}
 Instructions:
@@ -33,5 +33,4 @@ ${instructions}
 ${footer}`;
 
     Share.share({ message })
-
 }
