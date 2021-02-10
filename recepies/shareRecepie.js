@@ -16,7 +16,9 @@ const sharableRecepie = () => {
         getInstructions(bake).map((item, index) =>
             index + 1 + '. ' + item + '\n').join('')
 
-    return title + "\n\n*Ingredients:*\n" + ingredients() + '\n*Instructions:*\n' + instructions()
+    const footer = "Created by you with the help of the Baker's Dozen app"
+
+    return title + "\n\n*Ingredients:*\n" + ingredients() + '\n*Instructions:*\n' + instructions() + "\n\n" + footer
 };
 
 export default function shareRecepie() {
