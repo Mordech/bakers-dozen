@@ -27,7 +27,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#F9F9F9"
       },
-      "package": "com.mordech.bakersdozen",
+      "package": "com.mordech.bakersdozen"
     },
     "web": {
       "favicon": "./assets/favicon.png"
