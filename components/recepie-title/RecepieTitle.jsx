@@ -8,8 +8,6 @@ import { fonts } from "../../assets/inputs/fonts";
 import styles from "./recepieTitleStyles";
 
 function RecepieTitle(props) {
-	const animationPath = "../../assets/animations/bread-dark.json";
-
 	return (
 		<View style={styles().container}>
 			<View style={styles().headlineView}>

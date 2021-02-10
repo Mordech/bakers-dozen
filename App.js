@@ -16,15 +16,15 @@ if (Platform.OS === 'android') {
 
 export default function App() {
   //Screen size listener
-  const onChange = () => {
+  function onChange() {
     store.dispatch(getWindowSize(Dimensions.get('window')));
     // console.log(store.getState().windowSize)
-  };
+  }
 
   useEffect(() => {
-    Dimensions.addEventListener('change', onChange);
+    Dimensions.addEventListener('change', onChange());
     return () => {
-      Dimensions.removeEventListener('change', onChange);
+      Dimensions.removeEventListener('change', onChange());
     };
   });
 
