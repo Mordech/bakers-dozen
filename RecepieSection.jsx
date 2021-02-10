@@ -15,23 +15,17 @@ function RecepieSection() {
 
 	return (
 		<View style={appStyles().recepiePanel}>
-			<View
-				ref={recepieViewRef}
-				collapsable={false}
-				style={{ backgroundColor: themeColor(colors.background) }}
-			>
-				<RecepieTitle />
-				<View>
-					<Text style={appStyles().subHeadline}>Ingredients</Text>
-				</View>
-				<Ingredients />
-				<View>
-					<Text style={appStyles().subHeadline}>Recepie</Text>
-				</View>
-				<Recepie />
+			<RecepieTitle />
+			<View>
+				<Text style={appStyles().subHeadline}>Ingredients</Text>
 			</View>
+			<Ingredients />
+			<View>
+				<Text style={appStyles().subHeadline}>Recepie</Text>
+			</View>
+			<Recepie />
 			<ButtonAlt
-				lable="Share recipie"
+				lable='Share recipie'
 				press={() => {
 					shareRecepie();
 				}}
