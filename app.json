@@ -28,7 +28,6 @@
         "backgroundColor": "#F9F9F9"
       },
       "package": "com.mordech.bakersdozen",
-      "permissions": ["WRITE_EXTERNAL_STORAGE"]
     },
     "web": {
       "favicon": "./assets/favicon.png"
