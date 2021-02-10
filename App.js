@@ -15,7 +15,7 @@ if (Platform.OS === 'android') {
 }
 
 export default function App() {
-
+  //Screen size listener
   const onChange = () => {
     store.dispatch(getWindowSize(Dimensions.get('window')));
     // console.log(store.getState().windowSize)
@@ -28,6 +28,7 @@ export default function App() {
     };
   });
 
+  //Load fonts to app
   let [fontsLoaded] = useFonts({
     'DMSans-Bold': require('./assets/fonts/DMSans-Bold.ttf'),
     'DMSans-BoldItalic': require('./assets/fonts/DMSans-BoldItalic.ttf'),
