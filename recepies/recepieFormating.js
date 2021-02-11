@@ -1,9 +1,17 @@
 import { goods } from "../assets/inputs/BakeThings";
 
 //Check if the ingredient is water/olive oil or not
+const liquids = ["water", "oil", "milk"]
+
 export function isLiquid(item) {
-    return item.ingredient.includes("Water") ||
-        item.ingredient.includes("Olive")
+
+    return liquids.find(
+        (liquid) =>
+            item.ingredient
+                .toLowerCase()
+                .includes(liquid)
+    )
+
         ? "ml"
         : "g";
 }
