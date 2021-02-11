@@ -12,13 +12,11 @@ export default function shareRecepie() {
 
     const ingredients =
         getIngredients(bake, hydration, size).map((item) =>
-            `${item.ingredient}: ${Math.floor(item.value)}${isLiquid(item)}
-`).join("");
+            `${item.ingredient}: ${Math.floor(item.value)}${isLiquid(item)}`).join("\n");
 
     const instructions =
         getInstructions(bake).map((item, index) =>
-            `${index + 1}. ${item}
-`).join("");
+            `${index + 1}. ${item}`).join("\n");
 
     const footer = "Created by you with the help of the Baker's Dozen app";
 
@@ -27,6 +25,7 @@ export default function shareRecepie() {
 
 Ingredients:
 ${ingredients}
+
 Instructions:
 ${instructions}
 
