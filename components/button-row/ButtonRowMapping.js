@@ -1,6 +1,6 @@
 import * as action from '../../redux/actions'
 
-const mapBakesProps = (state /*, ownProps*/) => {
+const mapBakesProps = (state) => {
   return {
     value: state.bake,
     list: state.appLists.bakeList,
@@ -12,7 +12,7 @@ const mapBakesDispach = {
   toggle: action.toggleGoods,
 }
 
-const mapSizeProps = (state /*, ownProps*/) => {
+const mapSizeProps = (state) => {
   return {
     value: state.size,
     list: state.appLists.sizeList,
