@@ -1,7 +1,7 @@
 import { goods } from "../assets/inputs/BakeThings";
 import { breadInsctructions, makeBread, makePizza, makePretzel, pizzaInsctructions, pretzelInsctructions } from "./recepies";
 
-const getIngredients = (bake, hydration, size) => {
+function getIngredients(bake, hydration, size) {
     switch (bake) {
         case goods.bread:
             return makeBread(hydration, size);
@@ -16,9 +16,9 @@ const getIngredients = (bake, hydration, size) => {
             console.error("Unknown type 🥖");
             return makeBread(hydration, size);
     }
-};
+}
 
-const getInstructions = (bake) => {
+function getInstructions(bake) {
     switch (bake) {
         case goods.bread:
             return breadInsctructions;
@@ -30,6 +30,6 @@ const getInstructions = (bake) => {
             console.error("Unkown bake 🥖");
             return pizzaInsctructions;
     }
-};
+}
 
 export { getIngredients, getInstructions }

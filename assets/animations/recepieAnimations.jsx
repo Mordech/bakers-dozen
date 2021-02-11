@@ -12,7 +12,7 @@ import { connect } from "react-redux";
 import { mapDispatchToProps, mapStateToProps } from "../../redux/maps";
 import isWide from "../../app-styles/isWide";
 
-const getAnimationLink = (bake, theme) => {
+function getAnimationLink(bake, theme) {
 	switch (theme) {
 		case "light":
 			switch (bake) {
@@ -48,7 +48,7 @@ const getAnimationLink = (bake, theme) => {
 			);
 			return bread_light;
 	}
-};
+}
 
 function RecepieAnimation(props) {
 	return (
@@ -65,11 +65,5 @@ function RecepieAnimation(props) {
 		/>
 	);
 }
-
-// function RecepieAnimation(props) {
-// 	return (
-// 		<RecepieAnimationView link={getAnimationLink(props.bake, props.theme)} />
-// 	);
-// }
 
 export default connect(mapStateToProps, mapDispatchToProps)(RecepieAnimation);

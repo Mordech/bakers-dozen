@@ -1,8 +1,8 @@
-import { Platform, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import colors from "../../app-styles/colors";
 import themeColor from "../../app-styles/ThemeColors";
 
-const styles = (props) => StyleSheet.create({
+const styles = () => StyleSheet.create({
     constainer: {
         marginTop: 8,
         alignSelf: 'stretch',

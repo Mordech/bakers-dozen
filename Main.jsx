@@ -1,13 +1,11 @@
 import React from "react";
 import { View, ScrollView, SafeAreaView } from "react-native";
-import { connect } from "react-redux";
-import { mapDispatchToProps, mapStateToProps } from "./redux/maps";
 import appStyles from "./app-styles/appStyles";
 import PrepareSection from "./PrepareSection";
 import RecepieSection from "./RecepieSection";
 import isWide from "./app-styles/isWide";
 
-function Main(props) {
+function Main() {
 	if (isWide(1024)) {
 		return (
 			<SafeAreaView style={appStyles().container}>
@@ -43,4 +41,4 @@ function Main(props) {
 	);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default Main;

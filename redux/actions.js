@@ -6,22 +6,22 @@ const toggleGoods = (selectedGood) => {
 }
 
 const toggleSize = (selectedSize) => {
-    return{
+    return {
         type: 'TOGGLE_SIZE',
         payload: selectedSize
     }
 }
 
-const toggleTheme = (theme) => {
-    return{
+function toggleTheme(theme) {
+    return {
         type: 'TOGGLE_THEME',
         payload: theme === 'light' ? 'dark' : 'light'
     }
 }
 
-const setHydration = (value) => {
-    if (value <= 57){
-        return{
+function setHydration(value) {
+    if (value <= 57) {
+        return {
             type: 'SET_HYDRATION',
             payload: {
                 value,
@@ -29,7 +29,7 @@ const setHydration = (value) => {
             }
         }
     } else if (value <= 65) {
-        return{
+        return {
             type: 'SET_HYDRATION',
             payload: {
                 value,
@@ -37,7 +37,7 @@ const setHydration = (value) => {
             }
         }
     }
-    return{
+    return {
         type: 'SET_HYDRATION',
         payload: {
             value,
@@ -46,17 +46,18 @@ const setHydration = (value) => {
     }
 }
 
-const getWindowSize = (window) => {
-    return{
+function getWindowSize(window) {
+    return {
         type: 'GET_WINDOW_SIZE',
         payload: window
     }
 }
-const toggleReadMore = (readMore) => {
-    return{
+
+function toggleReadMore(readMore) {
+    return {
         type: 'TOGGLE_READMORE',
         payload: !readMore
     }
 }
 
-export {toggleGoods, toggleSize, toggleTheme, setHydration, getWindowSize, toggleReadMore}
+export { toggleGoods, toggleSize, toggleTheme, setHydration, getWindowSize, toggleReadMore }

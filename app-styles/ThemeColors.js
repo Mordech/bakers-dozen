@@ -4,13 +4,13 @@ import store from "../redux/store";
 import colors from "./colors";
 
 //Listen to device appearance
-Appearance.addChangeListener(setTheme => {
+Appearance.addChangeListener(() => {
     const theme = Appearance.getColorScheme() === 'light' ? 'dark' : 'light';
     store.dispatch(toggleTheme(theme));
 
 })
 
-function getTheme(props) {
+function getTheme() {
     return store.getState().theme
 }
 

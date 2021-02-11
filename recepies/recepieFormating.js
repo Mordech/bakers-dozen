@@ -19,6 +19,6 @@ export function bakeEmoji(bake) {
 
         default:
             console.error('No baked good has been entered defaulting to no emoji')
-            return ""
+            return
     }
 }
