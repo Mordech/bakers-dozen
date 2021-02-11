@@ -24,7 +24,7 @@ function SliderView(props) {
 			onValueChange={(value) => props.setHydration(value)}
 			minimumValue={50}
 			maximumValue={80}
-			value={60}
+			value={props.hydration.value}
 		/>
 	);
 }
