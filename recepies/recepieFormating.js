@@ -1,6 +1,6 @@
 import { goods } from "../assets/inputs/BakeThings";
 
-//Check if the ingredient is water/olive oil or not
+//Check if the ingredient is one of the liquids in the liquids array
 const liquids = ["water", "oil", "milk"]
 
 export function isLiquid(item) {
