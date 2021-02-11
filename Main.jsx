@@ -1,5 +1,7 @@
 import React from "react";
 import { View, ScrollView, SafeAreaView } from "react-native";
+import { connect } from "react-redux";
+import { mapDispatchToProps, mapStateToProps } from "./redux/maps";
 import appStyles from "./app-styles/appStyles";
 import PrepareSection from "./PrepareSection";
 import RecepieSection from "./RecepieSection";
@@ -41,4 +43,4 @@ function Main() {
 	);
 }
 
-export default Main;
+export default connect(mapStateToProps, mapDispatchToProps)(Main);
