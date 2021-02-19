@@ -1,21 +1,21 @@
 const toggleGoods = (selectedGood) => {
     return {
         type: 'TOOGLE_GOODS',
-        payload: selectedGood
+        payload: selectedGood,
     }
 }
 
 const toggleSize = (selectedSize) => {
     return {
         type: 'TOGGLE_SIZE',
-        payload: selectedSize
+        payload: selectedSize,
     }
 }
 
 function toggleTheme(theme) {
     return {
         type: 'TOGGLE_THEME',
-        payload: theme === 'light' ? 'dark' : 'light'
+        payload: theme === 'light' ? 'dark' : 'light',
     }
 }
 
@@ -25,39 +25,46 @@ function setHydration(value) {
             type: 'SET_HYDRATION',
             payload: {
                 value,
-                texture: 'stiff'
-            }
+                texture: 'stiff',
+            },
         }
     } else if (value <= 65) {
         return {
             type: 'SET_HYDRATION',
             payload: {
                 value,
-                texture: 'standart'
-            }
+                texture: 'standart',
+            },
         }
     }
     return {
         type: 'SET_HYDRATION',
         payload: {
             value,
-            texture: 'rustic'
-        }
+            texture: 'rustic',
+        },
     }
 }
 
 function getWindowSize(window) {
     return {
         type: 'GET_WINDOW_SIZE',
-        payload: window
+        payload: window,
     }
 }
 
 function toggleReadMore(readMore) {
     return {
         type: 'TOGGLE_READMORE',
-        payload: !readMore
+        payload: !readMore,
     }
 }
 
-export { toggleGoods, toggleSize, toggleTheme, setHydration, getWindowSize, toggleReadMore }
+export {
+    toggleGoods,
+    toggleSize,
+    toggleTheme,
+    setHydration,
+    getWindowSize,
+    toggleReadMore,
+}

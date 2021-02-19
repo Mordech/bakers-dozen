@@ -1,17 +1,18 @@
-import { StyleSheet } from "react-native";
-import colors from "../../app-styles/colors";
-import themeColor from "../../app-styles/ThemeColors";
+import { StyleSheet } from 'react-native'
+import colors from '../../app-styles/colors'
+import themeColor from '../../app-styles/ThemeColors'
 
-const styles = () => StyleSheet.create({
-    constainer: {
-        marginTop: 8,
-        alignSelf: 'stretch',
-        padding: 14,
-        paddingBottom: 18,
-        backgroundColor: themeColor(colors.secondary),
-        borderRadius: 8,
-        marginBottom: 40,
-    }
-})
+const styles = () =>
+    StyleSheet.create({
+        constainer: {
+            marginTop: 8,
+            alignSelf: 'stretch',
+            padding: 14,
+            paddingBottom: 18,
+            backgroundColor: themeColor(colors.secondary),
+            borderRadius: 8,
+            marginBottom: 40,
+        },
+    })
 
 export default styles
