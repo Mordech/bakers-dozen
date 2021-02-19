@@ -4,20 +4,20 @@ import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import { Provider } from 'react-redux';
 import { Dimensions, Platform, UIManager } from 'react-native';
-import store from './redux/store';
-import Main from './Main.jsx';
-import { getWindowSize } from './redux/actions';
-import DMSansBold from './assets/fonts/DMSans-Bold.ttf';
-import DMSansBoldItalic from './assets/fonts/DMSans-BoldItalic.ttf';
-import DMSansItalic from './assets/fonts/DMSans-Italic.ttf';
-import DMSansMedium from './assets/fonts/DMSans-Medium.ttf';
-import DMSansMediumItalic from './assets/fonts/DMSans-MediumItalic.ttf';
-import DMSansRegular from './assets/fonts/DMSans-Regular.ttf';
-import EczarBold from './assets/fonts/Eczar-Bold.ttf';
-import EczarExtraBold from './assets/fonts/Eczar-ExtraBold.ttf';
-import EczarMedium from './assets/fonts/Eczar-Medium.ttf';
-import EczarRegular from './assets/fonts/Eczar-Regular.ttf';
-import EczarSemiBold from './assets/fonts/Eczar-SemiBold.ttf';
+import store from './src/redux/store';
+import Main from './src/Main.jsx';
+import { getWindowSize } from './src/redux/actions';
+import DMSansBold from './src/assets/fonts/DMSans-Bold.ttf';
+import DMSansBoldItalic from './src/assets/fonts/DMSans-BoldItalic.ttf';
+import DMSansItalic from './src/assets/fonts/DMSans-Italic.ttf';
+import DMSansMedium from './src/assets/fonts/DMSans-Medium.ttf';
+import DMSansMediumItalic from './src/assets/fonts/DMSans-MediumItalic.ttf';
+import DMSansRegular from './src/assets/fonts/DMSans-Regular.ttf';
+import EczarBold from './src/assets/fonts/Eczar-Bold.ttf';
+import EczarExtraBold from './src/assets/fonts/Eczar-ExtraBold.ttf';
+import EczarMedium from './src/assets/fonts/Eczar-Medium.ttf';
+import EczarRegular from './src/assets/fonts/Eczar-Regular.ttf';
+import EczarSemiBold from './src/assets/fonts/Eczar-SemiBold.ttf';
 
 if (Platform.OS === 'android') {
   if (UIManager.setLayoutAnimationEnabledExperimental) {

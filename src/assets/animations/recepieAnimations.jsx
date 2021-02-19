@@ -1,14 +1,14 @@
 import React from 'react';
 import LottieView from 'lottie-react-native';
 
-import bread_light from './bread-light.json';
-import bread_dark from './bread-dark.json';
-import pizza_light from './pizza-light.json';
-import pizza_dark from './pizza-dark.json';
-import pretzel_light from './pretzel-light.json';
-import pretzel_dark from './pretzel-dark.json';
-import { goods } from '../inputs/BakeThings';
 import { connect } from 'react-redux';
+import breadLight from './bread-light.json';
+import breadDark from './bread-dark.json';
+import pizzaLight from './pizza-light.json';
+import pizzaDark from './pizza-dark.json';
+import pretzelLight from './pretzel-light.json';
+import pretzelDark from './pretzel-dark.json';
+import { goods } from '../inputs/BakeThings';
 import { mapDispatchToProps, mapStateToProps } from '../../redux/maps';
 import isWide from '../../app-styles/isWide';
 
@@ -17,36 +17,36 @@ function getAnimationLink(bake, theme) {
     case 'light':
       switch (bake) {
         case goods.bread:
-          return bread_light;
+          return breadLight;
         case goods.pizza:
-          return pizza_light;
+          return pizzaLight;
         case goods.pretzel:
-          return pretzel_light;
+          return pretzelLight;
         default:
           console.error(
             "Can't find your bake running default animation for dark theme"
           );
-          return bread_light;
+          return breadLight;
       }
     case 'dark':
       switch (bake) {
         case goods.bread:
-          return bread_dark;
+          return breadDark;
         case goods.pizza:
-          return pizza_dark;
+          return pizzaDark;
         case goods.pretzel:
-          return pretzel_dark;
+          return pretzelDark;
         default:
           console.error(
             "Can't find your bake running default animation for dark theme"
           );
-          return bread_dark;
+          return breadDark;
       }
     default:
       console.error(
         'Oops, animation has failed for some reason running default animation 🍞'
       );
-      return bread_light;
+      return breadLight;
   }
 }
 

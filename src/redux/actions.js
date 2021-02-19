@@ -28,7 +28,8 @@ function setHydration(value) {
         texture: 'stiff',
       },
     };
-  } else if (value <= 65) {
+  }
+  if (value <= 65) {
     return {
       type: 'SET_HYDRATION',
       payload: {
