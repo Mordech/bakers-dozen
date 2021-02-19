@@ -2,7 +2,7 @@ import { Platform, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 import colors from './colors';
 import themeColor from './ThemeColors';
-import { fonts } from '../assets/inputs/fonts';
+import fonts from '../assets/inputs/fonts';
 import isWide, { widthRange } from './isWide';
 
 const appStyles = () =>

@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Pressable, Text, LayoutAnimation, Animated } from 'react-native';
 import { connect } from 'react-redux';
 import appStyles from '../../app-styles/appStyles';
-import { fonts } from '../../assets/inputs/fonts';
+import fonts from '../../assets/inputs/fonts';
 import { mapDispatchToProps, mapStateToProps } from '../../redux/maps';
 import getTip from './hydrationTipsText';
 import styles from './HydrationTipStyle';

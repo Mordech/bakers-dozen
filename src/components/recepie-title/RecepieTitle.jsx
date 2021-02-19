@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import RecepieAnimation from '../../assets/animations/recepieAnimations.jsx';
 import { mapDispatchToProps, mapStateToProps } from '../../redux/maps';
 import appStyles from '../../app-styles/appStyles';
-import { fonts } from '../../assets/inputs/fonts';
+import fonts from '../../assets/inputs/fonts';
 import styles from './recepieTitleStyles';
 
 function RecepieTitle(props) {

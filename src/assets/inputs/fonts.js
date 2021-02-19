@@ -1,8 +1,8 @@
 const fonts = {
-    sansRegular: 'DMSans-Regular',
-    sansBold: 'DMSans-Bold',
-    serifRegular: 'Eczar-Regular',
-    serifBold: 'Eczar-Bold'
-}
+  sansRegular: 'DMSans-Regular',
+  sansBold: 'DMSans-Bold',
+  serifRegular: 'Eczar-Regular',
+  serifBold: 'Eczar-Bold',
+};
 
-export { fonts }
+export default fonts;
