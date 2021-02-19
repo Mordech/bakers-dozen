@@ -25,8 +25,7 @@ function ButtonRow(props) {
     <ScrollView
       horizontal={true}
       showsHorizontalScrollIndicator={false}
-      alwaysBounceHorizontal={false}
-    >
+      alwaysBounceHorizontal={false}>
       <View style={styles().container}>
         {list.map((item) => (
           <ButtonAlt
