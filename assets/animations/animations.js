@@ -1,4 +1,4 @@
-import { Animated, Easing, LayoutAnimation, Platform } from "react-native";
+import { Animated, Easing, LayoutAnimation, Platform } from 'react-native';
 
 const fadeIn = (ref) => {
   Animated.timing(ref, {
@@ -15,12 +15,12 @@ const CustomLayoutEaseOut = {
     delay: 80,
     duration: 250,
     type: LayoutAnimation.Types.easeOut,
-    property: LayoutAnimation.Properties.opacity
+    property: LayoutAnimation.Properties.opacity,
   },
   update: {
     duration: 120,
     type: LayoutAnimation.Types.easeOut,
-    property: LayoutAnimation.Properties.opacity
+    property: LayoutAnimation.Properties.opacity,
   },
 };
 const CustomLayoutSpring = {
@@ -28,7 +28,7 @@ const CustomLayoutSpring = {
   update: {
     type: LayoutAnimation.Types.spring,
     springDamping: Platform.OS === 'android' ? 0.85 : 0.6,
-    property: LayoutAnimation.Properties.opacity
+    property: LayoutAnimation.Properties.opacity,
   },
 };
-export { CustomLayoutSpring, CustomLayoutEaseOut, fadeIn }
+export { CustomLayoutSpring, CustomLayoutEaseOut, fadeIn };

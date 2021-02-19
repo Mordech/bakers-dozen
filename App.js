@@ -7,6 +7,17 @@ import store from './redux/store';
 import Main from './Main';
 import { Dimensions, Platform, UIManager } from 'react-native';
 import { getWindowSize } from './redux/actions';
+import DMSansBold from './assets/fonts/DMSans-Bold.ttf';
+import DMSansBoldItalic from './assets/fonts/DMSans-BoldItalic.ttf';
+import DMSansItalic from './assets/fonts/DMSans-Italic.ttf';
+import DMSansMedium from './assets/fonts/DMSans-Medium.ttf';
+import DMSansMediumItalic from './assets/fonts/DMSans-MediumItalic.ttf';
+import DMSansRegular from './assets/fonts/DMSans-Regular.ttf';
+import EczarBold from './assets/fonts/Eczar-Bold.ttf';
+import EczarExtraBold from './assets/fonts/Eczar-ExtraBold.ttf';
+import EczarMedium from './assets/fonts/Eczar-Medium.ttf';
+import EczarRegular from './assets/fonts/Eczar-Regular.ttf';
+import EczarSemiBold from './assets/fonts/Eczar-SemiBold.ttf';
 
 if (Platform.OS === 'android') {
   if (UIManager.setLayoutAnimationEnabledExperimental) {
@@ -30,17 +41,17 @@ export default function App() {
 
   //Load fonts to app
   let [fontsLoaded] = useFonts({
-    'DMSans-Bold': require('./assets/fonts/DMSans-Bold.ttf'),
-    'DMSans-BoldItalic': require('./assets/fonts/DMSans-BoldItalic.ttf'),
-    'DMSans-Italic': require('./assets/fonts/DMSans-Italic.ttf'),
-    'DMSans-Medium': require('./assets/fonts/DMSans-Medium.ttf'),
-    'DMSans-MediumItalic': require('./assets/fonts/DMSans-MediumItalic.ttf'),
-    'DMSans-Regular': require('./assets/fonts/DMSans-Regular.ttf'),
-    'Eczar-Bold': require('./assets/fonts/Eczar-Bold.ttf'),
-    'Eczar-ExtraBold': require('./assets/fonts/Eczar-ExtraBold.ttf'),
-    'Eczar-Medium': require('./assets/fonts/Eczar-Medium.ttf'),
-    'Eczar-Regular': require('./assets/fonts/Eczar-Regular.ttf'),
-    'Eczar-SemiBold': require('./assets/fonts/Eczar-SemiBold.ttf'),
+    'DMSans-Bold': DMSansBold,
+    'DMSans-BoldItalic': DMSansBoldItalic,
+    'DMSans-Italic': DMSansItalic,
+    'DMSans-Medium': DMSansMedium,
+    'DMSans-MediumItalic': DMSansMediumItalic,
+    'DMSans-Regular': DMSansRegular,
+    'Eczar-Bold': EczarBold,
+    'Eczar-ExtraBold': EczarExtraBold,
+    'Eczar-Medium': EczarMedium,
+    'Eczar-Regular': EczarRegular,
+    'Eczar-SemiBold': EczarSemiBold,
   });
 
   if (!fontsLoaded) {

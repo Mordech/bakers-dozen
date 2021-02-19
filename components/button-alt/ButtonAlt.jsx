@@ -14,8 +14,7 @@ export default function ButtonAlt(props) {
       android_ripple={{
         color: themeColor(colors.background),
         borderless: false,
-      }}
-    >
+      }}>
       {({ pressed }) => (
         <Text style={styles(selected, pressed).labelColor}>{props.lable}</Text>
       )}

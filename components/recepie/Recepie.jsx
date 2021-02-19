@@ -10,7 +10,7 @@ import styles from './recepieStyle';
 function Recepie(props) {
   const bake = props.bake;
   return (
-    <View style={appStyles().list} style={appStyles().list}>
+    <View style={appStyles().list}>
       {getInstructions(bake).map((item, index) => (
         <View style={[appStyles.list]} key={index}>
           <View style={styles().listItem}>
@@ -18,8 +18,10 @@ function Recepie(props) {
               {index + 1}.
             </Text>
             <Text
-              style={[appStyles().body, { maxWidth: isWide(1024) ? 700 : 500 }]}
-            >
+              style={[
+                appStyles().body,
+                { maxWidth: isWide(1024) ? 700 : 500 },
+              ]}>
               {item}
             </Text>
           </View>

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Text, View } from 'react-native';
 import appStyles from './app-styles/appStyles';
 import Ingredients from './components/Ingredients/Ingredients';
@@ -8,8 +8,6 @@ import RecepieTitle from './components/recepie-title/RecepieTitle';
 import shareRecepie from './recepies/shareRecepie';
 
 function RecepieSection() {
-  const recepieViewRef = useRef();
-
   return (
     <View style={appStyles().recepiePanel}>
       <RecepieTitle />

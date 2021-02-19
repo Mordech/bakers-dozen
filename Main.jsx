@@ -14,14 +14,12 @@ function Main() {
         <View style={appStyles().margins}>
           <ScrollView
             showsVerticalScrollIndicator={false}
-            alwaysBounceVertical={false}
-          >
+            alwaysBounceVertical={false}>
             <PrepareSection />
           </ScrollView>
           <ScrollView
             showsVerticalScrollIndicator={false}
-            alwaysBounceVertical={false}
-          >
+            alwaysBounceVertical={false}>
             <RecepieSection />
           </ScrollView>
         </View>
@@ -32,8 +30,7 @@ function Main() {
     <SafeAreaView style={appStyles().container}>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        alwaysBounceVertical={false}
-      >
+        alwaysBounceVertical={false}>
         <View style={appStyles().margins}>
           <PrepareSection />
           <RecepieSection />
