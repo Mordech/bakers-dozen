@@ -1,15 +1,10 @@
 import { sizes } from '../assets/inputs/BakeThings';
 
-//the Value in ingredients is in percents
-//Recepie creator
+// the Value in ingredients is in percents
+// Recepie creator
 function createRecepie(hydration, size, ingredients, small, medium, large) {
-  //Set the flour value from it's size
-  var flour = {
-    ingredient: 'Flour',
-    value: howMuchFlour(size),
-  };
-
-  function howMuchFlour(size) {
+  // Set the flour value from it's size
+  function howMuchFlour() {
     switch (size) {
       case sizes.small:
         return small / (hydration.value / 100 + 1);
@@ -25,22 +20,27 @@ function createRecepie(hydration, size, ingredients, small, medium, large) {
     }
   }
 
-  //Make percentage Float
+  const flour = {
+    ingredient: 'Flour',
+    value: howMuchFlour(),
+  };
+
+  // Make percentage Float
   function addSome(item) {
-    if (item != undefined) {
+    if (item !== undefined) {
       return flour.value * (item / 100);
     }
     return undefined;
   }
 
-  //Define hydration
+  // Define hydration
   const water = {
     ingredient: 'Water',
     value: Math.floor(addSome(hydration.value)),
   };
 
-  //Create recepie
-  var recepie = ingredients.map((item) => {
+  // Create recepie
+  const recepie = ingredients.map((item) => {
     return {
       ingredient: item.ingredient,
       value: addSome(item.value),
@@ -51,9 +51,9 @@ function createRecepie(hydration, size, ingredients, small, medium, large) {
   return recepie;
 }
 
-//This is a breakdown of all the recepies in the app
+// This is a breakdown of all the recepies in the app
 
-//Pizza
+// Pizza
 const pizzaIngredients = [
   {
     ingredient: 'Salt',
@@ -69,7 +69,7 @@ function makePizza(hydration, size) {
   return createRecepie(hydration, size, pizzaIngredients, 200, 250, 300);
 }
 
-//Instuctions
+// Instuctions
 const pizzaInsctructions = [
   'In a big bowl, add the water.',
   'Dissolve the salt into the water.',
@@ -83,7 +83,7 @@ const pizzaInsctructions = [
   'To bake, preheat your oven to 230°C / 210°C fan assisted. Bake for 25 minutes or until a good crust has formed.',
 ];
 
-//Bread
+// Bread
 const breadIngredients = [
   {
     ingredient: 'Salt',
@@ -108,7 +108,7 @@ const breadInsctructions = [
   'To bake, preheat your oven to 230°C / 210°C fan assisted. Bake for 25 minutes or until a good crust has formed.',
 ];
 
-//Prezel Bun
+// Prezel Bun
 const pretzelIngredients = [
   {
     ingredient: 'Salt',

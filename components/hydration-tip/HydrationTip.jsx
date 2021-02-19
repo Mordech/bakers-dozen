@@ -9,7 +9,7 @@ import styles from './HydrationTipStyle';
 import * as Animations from '../../assets/animations/animations';
 
 function HydrationTip(props) {
-  const readMore = props.readMore;
+  const { readMore } = props;
   const fadeText = useRef(new Animated.Value(0)).current;
 
   function toggleReadMore() {

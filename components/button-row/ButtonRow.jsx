@@ -1,8 +1,8 @@
 import React from 'react';
 import { LayoutAnimation, ScrollView, View } from 'react-native';
-import ButtonAlt from '../button-alt/ButtonAlt';
-import styles from './ButtonRowStyle';
 import { connect } from 'react-redux';
+import ButtonAlt from '../button-alt/ButtonAlt.jsx';
+import styles from './ButtonRowStyle';
 import {
   mapBakesDispach,
   mapBakesProps,
@@ -13,13 +13,13 @@ import * as Animations from '../../assets/animations/animations';
 
 function ButtonRow(props) {
   function toggle(item) {
-    if (item != props.value) {
+    if (item !== props.value) {
       props.toggle(item);
       LayoutAnimation.configureNext(Animations.CustomLayoutEaseOut);
     }
   }
 
-  const list = props.list;
+  const { list } = props;
 
   return (
     <ScrollView

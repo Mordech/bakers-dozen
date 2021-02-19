@@ -8,7 +8,7 @@ import { mapStateToProps } from '../../redux/maps';
 import styles from './recepieStyle';
 
 function Recepie(props) {
-  const bake = props.bake;
+  const { bake } = props;
   return (
     <View style={appStyles().list}>
       {getInstructions(bake).map((item, index) => (

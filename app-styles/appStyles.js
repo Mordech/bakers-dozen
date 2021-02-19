@@ -1,6 +1,6 @@
 import { Platform, StyleSheet } from 'react-native';
-import colors from './colors';
 import Constants from 'expo-constants';
+import colors from './colors';
 import themeColor from './ThemeColors';
 import { fonts } from '../assets/inputs/fonts';
 import isWide, { widthRange } from './isWide';
@@ -16,7 +16,7 @@ const appStyles = () =>
     },
     margins: {
       flexDirection: isWide(1024) ? 'row' : 'column',
-      //widthRange improve responsive design for iPad 8th gen and iPad pro 9.7 inch in horizontal
+      // widthRange improve responsive design for iPad 8th gen and iPad pro 9.7 inch in horizontal
       marginHorizontal: isWide(640) ? (widthRange(1024, 1170) ? 0 : 60) : 24,
       marginVertical:
         Platform.OS === 'android' ? Constants.statusBarHeight + 32 : 24,

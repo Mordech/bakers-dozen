@@ -4,9 +4,9 @@ import { bakeEmoji, isLiquid } from './recepieFormating';
 import { getIngredients, getInstructions } from './makeRecepie';
 
 export default function shareRecepie() {
-  const bake = store.getState().bake;
-  const hydration = store.getState().hydration;
-  const size = store.getState().size;
+  const { bake } = store.getState();
+  const { hydration } = store.getState();
+  const { size } = store.getState();
 
   const title = `Recepie for ${size} ${bake} ${
     hydration.value

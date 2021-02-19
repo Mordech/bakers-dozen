@@ -18,7 +18,7 @@ const getTip = (bake) => {
     case goods.pretzel:
       return tips.pretzel;
     default:
-      console.error('No tip for this the value' + bake + '🤷‍♂️');
+      console.error(`No tip for this the value ${bake}🤷‍♂️`);
       return tips.bread;
   }
 };

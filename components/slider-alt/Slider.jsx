@@ -1,11 +1,11 @@
 import React from 'react';
 import Slider from '@react-native-community/slider';
+import { connect } from 'react-redux';
+import { Platform, Text, View } from 'react-native';
 import colors from '../../app-styles/colors';
 import sliderStyle from './SliderStyle';
-import { connect } from 'react-redux';
 import { mapDispatchToProps, mapStateToProps } from '../../redux/maps';
 import themeColor from '../../app-styles/ThemeColors';
-import { Platform, Text, View } from 'react-native';
 import appStyles from '../../app-styles/appStyles';
 
 function SliderView(props) {

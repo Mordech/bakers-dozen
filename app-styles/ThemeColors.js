@@ -3,7 +3,7 @@ import { toggleTheme } from '../redux/actions';
 import store from '../redux/store';
 import colors from './colors';
 
-//Listen to device appearance
+// Listen to device appearance
 Appearance.addChangeListener(() => {
   const theme = Appearance.getColorScheme() === 'light' ? 'dark' : 'light';
   store.dispatch(toggleTheme(theme));
@@ -13,7 +13,7 @@ function getTheme() {
   return store.getState().theme;
 }
 
-//Contextual colors responsive to device's colorScheme
+// Contextual colors responsive to device's colorScheme
 function themeColor(color) {
   switch (color) {
     case 'primary':
@@ -25,7 +25,7 @@ function themeColor(color) {
         ? colors.backgroundLight
         : colors.backgroundDark;
     default:
-      console.error('No color type has been entered 🧑‍🎨');
+      return console.error('No color type has been entered 🧑‍🎨');
   }
 }
 

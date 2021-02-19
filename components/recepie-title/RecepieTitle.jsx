@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { connect } from 'react-redux';
-import RecepieAnimation from '../../assets/animations/recepieAnimations';
+import RecepieAnimation from '../../assets/animations/recepieAnimations.jsx';
 import { mapDispatchToProps, mapStateToProps } from '../../redux/maps';
 import appStyles from '../../app-styles/appStyles';
 import { fonts } from '../../assets/inputs/fonts';

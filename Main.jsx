@@ -3,8 +3,8 @@ import { View, ScrollView, SafeAreaView } from 'react-native';
 import { connect } from 'react-redux';
 import { mapDispatchToProps, mapStateToProps } from './redux/maps';
 import appStyles from './app-styles/appStyles';
-import PrepareSection from './PrepareSection';
-import RecepieSection from './RecepieSection';
+import PrepareSection from './PrepareSection.jsx';
+import RecepieSection from './RecepieSection.jsx';
 import isWide from './app-styles/isWide';
 
 function Main() {

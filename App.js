@@ -3,9 +3,9 @@ import { StatusBar } from 'expo-status-bar';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import { Provider } from 'react-redux';
-import store from './redux/store';
-import Main from './Main';
 import { Dimensions, Platform, UIManager } from 'react-native';
+import store from './redux/store';
+import Main from './Main.jsx';
 import { getWindowSize } from './redux/actions';
 import DMSansBold from './assets/fonts/DMSans-Bold.ttf';
 import DMSansBoldItalic from './assets/fonts/DMSans-BoldItalic.ttf';
@@ -26,7 +26,7 @@ if (Platform.OS === 'android') {
 }
 
 export default function App() {
-  //Screen size listener
+  // Screen size listener
   function onChange() {
     store.dispatch(getWindowSize(Dimensions.get('window')));
     // console.log(store.getState().windowSize)
@@ -39,8 +39,8 @@ export default function App() {
     };
   });
 
-  //Load fonts to app
-  let [fontsLoaded] = useFonts({
+  // Load fonts to app
+  const [fontsLoaded] = useFonts({
     'DMSans-Bold': DMSansBold,
     'DMSans-BoldItalic': DMSansBoldItalic,
     'DMSans-Italic': DMSansItalic,
@@ -56,12 +56,11 @@ export default function App() {
 
   if (!fontsLoaded) {
     return <AppLoading />;
-  } else {
-    return (
-      <Provider store={store}>
-        <StatusBar style="auto" />
-        <Main />
-      </Provider>
-    );
   }
+  return (
+    <Provider store={store}>
+      <StatusBar style="auto" />
+      <Main />
+    </Provider>
+  );
 }

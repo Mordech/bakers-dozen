@@ -5,7 +5,7 @@ import themeColor from '../../app-styles/ThemeColors';
 import styles from './ButtonStyle';
 
 export default function ButtonAlt(props) {
-  const selected = props.item == props.value;
+  const selected = props.item === props.value;
 
   return (
     <Pressable

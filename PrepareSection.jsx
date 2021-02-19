@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import appStyles from './app-styles/appStyles';
-import { GoodsRow, SizesRow } from './components/button-row/ButtonRow';
-import HydrationTip from './components/hydration-tip/HydrationTip';
-import SliderAlt from './components/slider-alt/Slider';
+import { GoodsRow, SizesRow } from './components/button-row/ButtonRow.jsx';
+import HydrationTip from './components/hydration-tip/HydrationTip.jsx';
+import SliderAlt from './components/slider-alt/Slider.jsx';
 import { mapDispatchToProps, mapStateToProps } from './redux/maps';
 
 function PrepareSection(props) {
