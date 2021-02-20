@@ -55,7 +55,7 @@ export default function App() {
   });
 
   if (!fontsLoaded) {
-    // Get window size for the first time
+    // Get window size if oriantation changed while loading app
     store.dispatch(getWindowSize(Dimensions.get('window')));
     return <AppLoading />;
   }
