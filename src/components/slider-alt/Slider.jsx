@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Slider from '@react-native-community/slider';
 import { connect } from 'react-redux';
 import { Platform, Text, View } from 'react-native';
@@ -9,6 +9,7 @@ import themeColor from '../../app-styles/ThemeColors';
 import appStyles from '../../app-styles/appStyles';
 
 function SliderView(props) {
+  const currentHydrationValue = useRef(props.hydration.value);
   return (
     <Slider
       style={sliderStyle().slider}
@@ -24,7 +25,7 @@ function SliderView(props) {
       onValueChange={(value) => props.setHydration(value)}
       minimumValue={50}
       maximumValue={80}
-      value={props.hydration.value}
+      value={currentHydrationValue.current}
     />
   );
 }
