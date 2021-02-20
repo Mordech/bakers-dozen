@@ -55,6 +55,8 @@ export default function App() {
   });
 
   if (!fontsLoaded) {
+    // Get window size for the first time
+    store.dispatch(getWindowSize(Dimensions.get('window')));
     return <AppLoading />;
   }
   return (
