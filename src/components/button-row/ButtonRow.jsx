@@ -1,8 +1,8 @@
 import React from 'react';
-import { LayoutAnimation, ScrollView, View } from 'react-native';
+import { LayoutAnimation, View } from 'react-native';
 import { connect } from 'react-redux';
 import ButtonAlt from '../button-alt/ButtonAlt.jsx';
-import styles from './ButtonRowStyle';
+import styles, { ButtonRowScrollView } from './ButtonRowStyle';
 import {
   mapBakesDispach,
   mapBakesProps,
@@ -12,32 +12,30 @@ import {
 import * as Animations from '../../assets/animations/animations';
 
 function ButtonRow(props) {
+  const { list } = props;
+  const { value } = props;
+  // Toggle current value
   function toggle(item) {
-    if (item !== props.value) {
+    if (item !== value) {
       props.toggle(item);
       LayoutAnimation.configureNext(Animations.CustomLayoutEaseOut);
     }
   }
 
-  const { list } = props;
-
   return (
-    <ScrollView
-      horizontal={true}
-      showsHorizontalScrollIndicator={false}
-      alwaysBounceHorizontal={false}>
+    <ButtonRowScrollView>
       <View style={styles().container}>
         {list.map((item) => (
           <ButtonAlt
             lable={item}
             item={item}
-            value={props.value}
+            value={value}
             key={item}
             press={() => toggle(item)}
           />
         ))}
       </View>
-    </ScrollView>
+    </ButtonRowScrollView>
   );
 }
 
