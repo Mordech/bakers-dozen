@@ -1,4 +1,5 @@
-import { StyleSheet } from 'react-native';
+import React from 'react';
+import { ScrollView, StyleSheet } from 'react-native';
 
 const styles = () =>
   StyleSheet.create({
@@ -10,5 +11,14 @@ const styles = () =>
       alignSelf: 'flex-start',
     },
   });
+
+export const ButtonRowScrollView = ({ children }) => (
+  <ScrollView
+    horizontal={true}
+    showsHorizontalScrollIndicator={false}
+    alwaysBounceHorizontal={false}>
+    {children}
+  </ScrollView>
+);
 
 export default styles;
