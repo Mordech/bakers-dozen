@@ -79,5 +79,4 @@ const appStyles = () =>
       alignSelf: 'stretch',
     },
   });
-
 export default appStyles;

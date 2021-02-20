@@ -7,9 +7,7 @@ import { getIngredients } from '../../recepies/makeRecepie';
 import { mapDispatchToProps, mapStateToProps } from '../../redux/maps';
 
 function Ingredients(props) {
-  const { bake } = props;
-  const { hydration } = props;
-  const { size } = props;
+  const { bake, hydration, size } = props;
 
   return (
     <View style={appStyles().list}>

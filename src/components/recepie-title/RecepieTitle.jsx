@@ -8,13 +8,15 @@ import fonts from '../../assets/inputs/fonts';
 import styles from './recepieTitleStyles';
 
 function RecepieTitle(props) {
+  const { bake } = props;
+
   return (
     <View style={styles().container}>
       <View style={styles().headlineView}>
         <Text style={appStyles().subHeadline}>Your</Text>
         <Text style={[appStyles().headline, styles().headline]}>
           <Text style={{ fontFamily: fonts.serifBold }}>
-            {props.bake.toLowerCase()}
+            {bake.toLowerCase()}
           </Text>
           <Text>{'\n'}recepie</Text>
         </Text>
