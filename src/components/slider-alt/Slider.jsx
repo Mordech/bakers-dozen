@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Slider from '@react-native-community/slider';
 import { connect } from 'react-redux';
 import { Platform, Text, View } from 'react-native';
@@ -10,6 +10,14 @@ import appStyles from '../../app-styles/appStyles';
 
 function SliderView(props) {
   const currentHydrationValue = useRef(props.hydration.value);
+  const [hydrationValue, setHydrationValue] = useState(props.hydration.value);
+
+  useEffect(() => {
+    if (props.hydration.value !== hydrationValue) {
+      props.setHydration(hydrationValue);
+    }
+  }, [hydrationValue]);
+
   return (
     <Slider
       style={sliderStyle().slider}
@@ -22,7 +30,11 @@ function SliderView(props) {
           : themeColor(colors.secondary)
       }
       tapToSeek={true}
-      onValueChange={(value) => props.setHydration(value)}
+      onValueChange={(value) => {
+        if (value !== hydrationValue) {
+          requestAnimationFrame(() => setHydrationValue(value));
+        }
+      }}
       minimumValue={50}
       maximumValue={80}
       value={currentHydrationValue.current}
