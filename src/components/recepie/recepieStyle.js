@@ -6,10 +6,10 @@ const styles = () =>
     listItem: {
       marginBottom: 8,
       flexDirection: 'row',
+      maxWidth: 576,
     },
     listNumber: {
       fontFamily: fonts.sansBold,
-      minWidth: 28,
       width: 28,
     },
   });

@@ -24,23 +24,24 @@ const appStyles = () =>
     },
     preparePanel: isWide(1024)
       ? {
-          flex: 3,
-          alignContent: 'stretch',
-          marginHorizontal: 36,
-          marginTop: 36,
-          maxWidth: 450,
-          marginEnd: 48,
+          display: 'flex',
+          alignItems: 'stretch',
+          paddingStart: 36,
+          paddingTop: 36,
+          width: 412,
+          paddingEnd: 48,
         }
       : {
           maxWidth: 480,
         },
     recepiePanel: isWide(1024)
       ? {
+          display: 'flex',
           flex: 1,
-          marginHorizontal: 36,
-          marginTop: 36,
-          marginStart: 48,
-          marginBottom: 72,
+          paddingEnd: 36,
+          paddingTop: 36,
+          paddingStart: 48,
+          paddingBottom: 72,
         }
       : { marginBottom: Platform.OS === 'ios' ? 48 : 0 },
     smallText: {
