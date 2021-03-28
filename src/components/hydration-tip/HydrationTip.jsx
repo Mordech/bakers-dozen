@@ -39,8 +39,8 @@ function HydrationTip(props) {
   return (
     <Pressable style={styles().constainer} onPress={() => toggleReadMore()}>
       <Text style={appStyles().smallText}>
-        *Hydration is the weight of liquids reletive to the weight of flour in
-        your {bake.toLowerCase()}
+        *Hydration is the weight of liquids relative to the flour in your{' '}
+        {bake.toLowerCase()}
         <ReadMore />
       </Text>
     </Pressable>

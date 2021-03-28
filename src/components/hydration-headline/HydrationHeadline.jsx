@@ -14,7 +14,7 @@ function HydrationHeadline(props) {
 
   return (
     <Text style={appStyles().subHeadline}>
-      Your {size} {bake} is <BoldSerif>{texture}</BoldSerif> at{' '}
+      Your {size} {bake} will be <BoldSerif>{texture}</BoldSerif> at{' '}
       <BoldSerif>{hydration}%</BoldSerif> hydration
       <Text style={{ fontFamily: fonts.sansRegular }}>*</Text>
     </Text>
