@@ -2,11 +2,11 @@ import { goods } from '../../assets/inputs/BakeThings';
 
 const tips = {
   bread:
-    'The more hydration, the more rustic your bread 🍞 is. But above 70% hydration, it will be tough to manage it.',
+    '\nThe more hydration, the more rustic your bread 🍞 is. Note that above 70% hydration, the bread will be tough to handle.',
   pizza:
-    "Pizza 🍕, like bread, is crustier the more hydration you use. But be careful. Above 70% hydration, it's tough to manage",
+    "\nPizza 🍕, like bread, is more rustic the more hydration you use. But be careful; above 70% hydration, it's a challenging dough to handle.",
   pretzel:
-    "The recommended hydration of pretzels 🥨 is stiff at 50%-57% hydration, but it doesn't hurt experimenting.",
+    "\nThe recommended hydration of pretzels 🥨 is firm at 50%-57% hydration, but it doesn't hurt experimenting.",
 };
 
 const getTip = (bake) => {

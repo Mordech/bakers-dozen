@@ -45,10 +45,10 @@ function SliderView(props) {
 function SliderAlt(props) {
   return (
     <View style={sliderStyle().container}>
-      <SliderView {...props} />
       <Text style={appStyles().smallText}>
-        Set the hydration of your {props.bake.toLowerCase()}
+        Set the hydration of your {props.bake.toLowerCase()}:
       </Text>
+      <SliderView {...props} />
     </View>
   );
 }

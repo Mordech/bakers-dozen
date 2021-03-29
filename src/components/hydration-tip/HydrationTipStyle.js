@@ -6,12 +6,12 @@ const styles = () =>
   StyleSheet.create({
     constainer: {
       marginTop: 8,
+      marginBottom: 40,
       alignSelf: 'stretch',
       padding: 14,
       paddingBottom: 18,
       backgroundColor: themeColor(colors.secondary),
       borderRadius: 8,
-      marginBottom: 40,
     },
   });
 

@@ -25,7 +25,7 @@ function setHydration(value) {
       type: 'SET_HYDRATION',
       payload: {
         value,
-        texture: 'stiff',
+        texture: 'firm',
       },
     };
   }
