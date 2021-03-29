@@ -7,7 +7,7 @@ Baker's Dozen is a calculator app for baking bread, pizza, and pretzel.
 This app is my first Expo app and my first Javascript project. Use it at your own risk 😅.
 I used this project to learn the basics of Javascript, React, and Redux.
 
-The recipes are converted to percentages from a bunch of recipes and my basic knowledge of baking. <br>
+I converted the recipes to percentages from a bunch of recipes and my basic knowledge of baking. <br>
 If you run into problems with the recipes, please contact me.
 
 
@@ -35,8 +35,8 @@ Start Expo server
 ```bash
 $ npm android
 ```
-Run Android in simulator
+Run Android in a simulator
 ```bash
 $ npm ios
 ```
-Run iOS in simulator
+Run iOS in a simulator
