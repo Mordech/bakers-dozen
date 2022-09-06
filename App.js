@@ -35,7 +35,7 @@ export default function App() {
   useEffect(() => {
     Dimensions.addEventListener('change', onChange);
     return () => {
-      Dimensions.removeEventListener('change', onChange);
+      Dimensions.remove('change', onChange);
     };
   });
 
