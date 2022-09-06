@@ -17,7 +17,7 @@ Just install all of the dependencies, and you're good to go.
 
 
 ```bash
-$ npm install
+$ yarn
 ```
 
 > ### ⚠️ Note
@@ -28,15 +28,15 @@ $ npm install
 
 ### Usage
 ```bash
-$ npm start
+$ yarn start
 ```
 Start Expo server
 
 ```bash
-$ npm android
+$ yarn android
 ```
 Run Android in a simulator
 ```bash
-$ npm ios
+$ yarn ios
 ```
 Run iOS in a simulator
