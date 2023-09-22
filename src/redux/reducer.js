@@ -1,7 +1,7 @@
 import { Appearance, Dimensions } from 'react-native';
 import { combineReducers } from 'redux';
 import { goods, lists, sizes } from '../assets/inputs/BakeThings';
-import { makeBread } from '../recepies/recepies';
+import { makeBread } from '../recipes/recipes';
 
 const initTheme = Appearance.getColorScheme();
 
@@ -10,7 +10,7 @@ const initHydration = {
   texture: 'Standard',
 };
 
-const initRecepie = makeBread(60, sizes.medium);
+const initRecipe = makeBread(60, sizes.medium);
 
 const window = Dimensions.get('window');
 
@@ -46,8 +46,8 @@ function hydration(state = initHydration, action) {
   return state;
 }
 
-function recepie(state = initRecepie, action) {
-  if (action.type === 'SET_RECIPIE') {
+function recipe(state = initRecipe, action) {
+  if (action.type === 'SET_RECIPE') {
     return action.payload;
   }
   return state;
@@ -72,7 +72,7 @@ const reducers = combineReducers({
   theme,
   appLists,
   hydration,
-  recepie,
+  recipe,
   windowSize,
   readMore,
 });
