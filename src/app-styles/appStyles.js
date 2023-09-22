@@ -1,8 +1,8 @@
-import { Platform, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
-import colors from './colors';
-import themeColor from './ThemeColors';
+import { Platform, StyleSheet } from 'react-native';
 import fonts from '../assets/inputs/fonts';
+import themeColor from './ThemeColors';
+import colors from './colors';
 import isWide, { widthRange } from './isWide';
 
 const appStyles = () =>
@@ -34,7 +34,7 @@ const appStyles = () =>
       : {
           maxWidth: 480,
         },
-    recepiePanel: isWide(1024)
+    recipePanel: isWide(1024)
       ? {
           display: 'flex',
           flex: 1,
